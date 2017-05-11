@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/linux_shell_v2.dir/main.c.o  -o linux_shell_v2 
