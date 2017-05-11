@@ -13,9 +13,6 @@ int main() {
         input = handle_input(buffer);
 
 
-
-
-
     }
     return 0;
 }
