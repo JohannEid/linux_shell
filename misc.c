@@ -6,17 +6,12 @@
 
 void handle_input(const char *user_input) {
     char path_target[100];
-    size_t a;
-    if ((user_input[0]=='c') && (user_input[1]=='d')) {
-        //strncpy(path_target, user_input + 3, (strlen(user_input) -1) - 3);
-        //printf("the lenght is %d",strlen(user_input));
-        //printf("%s", path_target);
-        //if (!chdir(path_target)) { printf(("changed working directory to: %s"), path_target); }
-        //else { printf("Error cannot change directory"); }
+    if ((user_input[0] == 'c') && (user_input[1] == 'd')) {
+        strncpy(path_target, user_input + 3, (strlen(user_input)) - 3);
+        if (!chdir(path_target)) { printf(("changed working directory to: %s"), path_target); }
+        else { printf("Error cannot change directory"); }
 
-    }
-    if(user_input[0] == 'a'){printf(("call"));}
-    if (strcmp(user_input, "exit") == 0) { exit(0); }
+    } else if (strcmp(user_input, "exit") == 0) { exit(0); }
 
 }
 
