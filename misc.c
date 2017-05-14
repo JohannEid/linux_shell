@@ -1,15 +1,31 @@
 //
 // Created by johann on 11/05/17.
 //
+#include <stdlib.h>
 #include "misc.h"
 
-int handle_input(const char *user_input) {
+void handle_input(const char *user_input) {
     char path_target[100];
+    size_t a;
+    if ((user_input[0]=='c') && (user_input[1]=='d')) {
+        //strncpy(path_target, user_input + 3, (strlen(user_input) -1) - 3);
+        //printf("the lenght is %d",strlen(user_input));
+        //printf("%s", path_target);
+        //if (!chdir(path_target)) { printf(("changed working directory to: %s"), path_target); }
+        //else { printf("Error cannot change directory"); }
 
-    if(strcmp(user_input, "exit") == 0) { return 0; }
-    else if ((user_input[0] == 'c') && (user_input[1] == 'd')) {
-        for (int i = 3; i < strlen(user_input); ++i) { path_target[i - 3] = user_input[i]; }
     }
+    if(user_input[0] == 'a'){printf(("call"));}
+    if (strcmp(user_input, "exit") == 0) { exit(0); }
 
-    return 1;
 }
+
+void display_directory() {
+    char cwd[1024];
+    if (getcwd(cwd, sizeof(cwd)) != NULL)
+        fprintf(stdout, "\ndirectory: %s ", cwd);
+    else
+        perror("getcwd() error");
+
+}
+

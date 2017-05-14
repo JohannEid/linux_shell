@@ -2,17 +2,14 @@
 #include <stdbool.h>
 #include "misc.h"
 
-int main() {
+int main( int argc, char *argv[] ) {
     char buffer[100];
-    int input = 1;
-
-    while (input != 0)
+    while (true)
     {
-        printf("Hello, World!\n");
+        printf("yoyo");
+        display_directory();
         scanf("%s",buffer);
-        input = handle_input(buffer);
-
-
+        handle_input(buffer);
     }
     return 0;
 }
