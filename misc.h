@@ -24,4 +24,8 @@ void change_directory(const char* path_target);
 
 void delete_file(char* file_name);
 
+void rename_file(char* old_name,char* new_name);
+
+char ** split_string(char* string_to_split);
+
 #endif //LINUX_SHELL_MISC_H
