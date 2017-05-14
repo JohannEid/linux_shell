@@ -9,10 +9,14 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include <memory.h>
+#include <dirent.h>
+
 
 
 
 void handle_input(const char* user_input);
+
+void list_files();
 
 void display_directory();
 
