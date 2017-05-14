@@ -20,4 +20,8 @@ void list_files();
 
 void display_directory();
 
+void change_directory(const char* path_target);
+
+void delete_file(char* file_name);
+
 #endif //LINUX_SHELL_MISC_H
